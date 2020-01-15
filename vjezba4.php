@@ -8,25 +8,39 @@
 </head>
 <body>
     <?php
-    # useri koje imamo na sistemu (uloge)
-  $user= 1 ;
-  $admin= 2 ;
-  $superadmin= 4;
 
- # user koji se loguje
- $loggedUser= 2 ;
- $allowedUsers= $admin | $superadmin ;
-  
- if(($loggedUser & $allowedUsers) != 0 ) {
-     echo "This user is allowed" ;
+$recenica="Superman je Klark Kent.Spiderman je Piter Parker.Batman je Bruce Wayne.Wonderwoman je Diana Price.Flash je Barry Alen." ;
+$Superheroji=array (
 
- }  else {
-     echo "User is not allowed" ;
- }
+    "Superman",
+    "Spiderman",
+    "Batman",
+    "Wondarwoman",
+    "Flash"
+
+);
+$recenicaNiz=explode(" ",$recenica);
+foreach($recenicaNiz as $key=> &$value){
+    $velicinaSuperheroja=count($Superheroji);
+    for($i=0; $i<$velicinaSuperheroja;$i++){
+if($value==$Superheroji[$i]){
+    $value="*********" ;
+}
+
+
+    }
+}
+print_r($recenicaNiz);
+
+
 
 
 
 ?>
+
+
+
+
 
 </body>
 </html>
