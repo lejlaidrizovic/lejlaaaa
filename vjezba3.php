@@ -7,27 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-   <?php
-   #promjenljive i konstante
-   $promjenljiva="Ovo je promjenljiva" ;
-   define('konstanta',"Ovo je konstanta") ;
+    <?php
+$clanovi= array (
+    "student",
+    "profesor",
+    "koordinator",
+    "lektor",
+    "direktor"
+);
 
-   echo $promjenljiva ;
-   echo "<br><br>" ;
-   echo konstanta ;
-
-   $promjenljiva= "Ovo je promijenjena promjenljiva" ;
-   define('konstanta',"Ovo je nova konstanta") ;
-
-   echo $promjenljiva ;
-
-   echo "<br><br>" ;
-   echo konstanta ;
+$velicinaNiza= sizeof($clanovi) ;
+for($i=0;$i<$velicinaNiza ; $i++){
+    echo"JA SAM".$clanovi[$i] ."<br>" ;
+}
 
 
 
+?>
 
 
-   ?>
+
+
 </body>
 </html>
